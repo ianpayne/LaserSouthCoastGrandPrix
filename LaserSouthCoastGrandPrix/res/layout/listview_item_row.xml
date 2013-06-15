@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="4dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="4dp" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:singleLine="true"
+            android:text="11/11/1111"
+            android:textSize="@dimen/textSize" />
+
+        <TextView
+            android:id="@+id/txtTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:text="TEST"
+            android:textSize="@dimen/textSize" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imgFlag"
+        android:layout_width="48dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_vertical"
+        android:layout_margin="4dp"
+        android:adjustViewBounds="true"
+        android:background="@color/white"
+        android:contentDescription="@string/burgee"
+        android:scaleType="centerInside" />
+
+    <TextView
+        android:id="@+id/txtClub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|center_vertical"
+        android:gravity="left|center_vertical"
+        android:padding="4dp"
+        android:text="Test"
+        android:textAlignment="textStart"
+        android:textSize="@dimen/textSize" />
+
+</LinearLayout>

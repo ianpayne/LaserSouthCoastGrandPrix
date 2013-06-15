@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.idp.grandprix"
+    android:versionCode="5"
+    android:versionName="1.4" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+    
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-feature android:name="android.hardware.telephony" android:required="false" />
+	
+
+    <application
+        android:name=".LaserGrandPrixApp"
+        android:allowBackup="true"
+        
+        android:icon="@drawable/southcoast"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+        
+        <activity
+            android:name="com.idp.grandprix.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.idp.grandprix.EventActivity"
+            android:label="@string/title_activity_event" 
+            android:exported="false">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.idp.grandprix.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.idp.grandprix.FooterActivity"
+            android:label="@string/title_activity_footer" 
+            android:exported="false">
+        </activity>
+        <activity
+            android:name="com.idp.grandprix.FacebookActivity"
+            android:label="@string/title_activity_facebook"
+            android:exported="false" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.idp.grandprix.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.idp.grandprix.ClubActivity"
+            android:label="@string/title_activity_club"
+            android:exported="false" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.idp.grandprix.EventActivity" />
+            
+        </activity>
+        <activity
+            android:name="com.idp.grandprix.ResultsActivity"
+            android:label="@string/title_activity_results"
+            android:exported="false" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.idp.grandprix.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.idp.grandprix.ResultsPageActivity"
+            android:label="@string/title_activity_results_page"
+            android:exported="false" >
+        <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.idp.grandprix.ResultsActivity" />
+        </activity>
+        <activity
+            android:name="com.idp.grandprix.SponsorActivity"
+            android:label="@string/title_activity_sponsor"
+            android:exported="false" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.idp.grandprix.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.idp.grandprix.ClubMapActivity"
+            android:label="@string/title_activity_map"
+            android:exported="false" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.idp.grandprix.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.idp.grandprix.WebActivity"
+            android:label="@string/title_activity_web"
+            android:exported="false" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.idp.grandprix.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.idp.grandprix.AboutActivity"
+            android:label="@string/title_activity_about"
+            android:exported="false" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.idp.grandprix.MainActivity" />
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="4dp"
+    android:padding="4dp"
+    android:weightSum="4" >
+
+    <TextView
+        android:id="@+id/txtYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical|center_horizontal"
+        android:minWidth="56dp"
+        android:padding="4dp"
+        android:text="@string/Year"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="@dimen/headerSize" />
+
+ <!--      
+    <TextView
+        android:id="@+id/standard"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="left"
+        android:padding="4dp"
+        android:text="@string/Standard"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/radial"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="left"
+        android:padding="4dp"
+        android:text="@string/LaserRadial"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/fourpointseven"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="left"
+        android:padding="4dp"
+        android:text="@string/fourpointseven"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+ -->
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:minWidth="56dp"
+        android:padding="4dp"
+        android:text=" "
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:minWidth="56dp"
+        android:padding="4dp"
+        android:text=" "
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:minWidth="56dp"
+        android:padding="4dp"
+        android:text=" "
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="12sp" />
+  
+</LinearLayout>

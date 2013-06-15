@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <item
+        android:id="@+id/menu_home"
+        android:title="Home/Intro"
+        android:icon="@drawable/southcoast">
+    </item>
+    <item
+        android:id="@+id/menu_calendar"
+        android:title="Events"
+        android:icon="@drawable/calendar_blue">
+    </item>
+    <item
+        android:id="@+id/menu_results"
+        android:title="Results"
+        android:icon="@drawable/table">
+    </item>
+    <item
+        android:id="@+id/menu_sponsors"
+        android:title="Sponsors"
+        android:icon="@drawable/tag_label">
+    </item>
+    <item
+        android:id="@+id/menu_facebook"
+        android:title="Facebook"
+        android:icon="@drawable/facebook">
+    </item>
+    <item
+        android:id="@+id/menu_about"
+        android:title="About"
+        android:icon="@drawable/question">
+    </item>
+</menu>

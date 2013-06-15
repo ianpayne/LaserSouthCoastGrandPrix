@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/txtText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/Sponsored_by" >
+
+    </TextView>
+
+    <ImageView
+        android:id="@+id/btnRooster"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:contentDescription="@string/rooster"
+        android:onClick="roosterWebsite"
+        android:padding="10dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/roosterlogo" />
+
+    <ImageView
+        android:id="@+id/btnWildwind"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:contentDescription="@string/wildwind"
+        android:cropToPadding="true"
+        android:onClick="wildwindWebsite"
+        android:padding="20dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/wildwind" />
+
+</LinearLayout>

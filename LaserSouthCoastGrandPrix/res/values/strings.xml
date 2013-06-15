@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="version">1.5</string>
+    <string name="app_name">South Coast GP</string>
+    <string name="Sponsored_by">The Laser South Coast Grand Prix Circuit is sponsored by</string>
+    <string name="title_activity_event">South Coast GP, Events</string>
+    <string name="Club">Club</string>
+    <string name="Date">Date</string>
+    <string name="Time">Time</string>
+    <string name="Year">Year</string>
+    <string name="title_activity_footer">FooterActivity</string>
+    <string name="title_activity_facebook">South Coast GP, Facebook Page</string>
+    <string name="title_activity_club">South Coast GP, Club Profile</string>
+    <string name="title_activity_results">South Coast GP, Series Results</string>
+    <string name="title_activity_results_page">South Coast GP, Series Results</string>
+    <string name="title_activity_sponsor">South Coast GP, Sponsors</string>
+    <string name="short_description">The Laser South Coast Grand Prix is a series of Laser open meetings across the south of England, from as far East as Lancing Sailing Club to Sutton Bingham Sailing Club near Yeovil in the West. Each venue has its own challenges with sea clubs offering tides and waves to clubs on estuaries and reservoirs with their interesting courses and shifty winds.</string>
+    <string name="long_description">The events are open to the 4.7, Radial and Standard rigs. All levels of ability, and any age, young or old are welcome. Competitors need to be members of the UKLA and their boat must conform to the class rules.
+		\n\nThe series is sponsored by Rooster Sailing and Wildwind Sailing Holidays. To qualify for the end of series prizes and a chance of winning a Wildwind sailing holiday, you just need to compete in at least 6 grand prix events this year.
+		\n\nThe series results will be available on the Rooster Sailing website. Series prizes supplied by Rooster Sailing to be presented at the Chichester Yacht Club event. Wildwind sailing holiday to be drawn at the Inlands from all the qualifiers.
+		\n\nLast years prize list included a Rooster Coastal Jacket, a Rooster Semi Dry Top and a Rooster Carbon Tiller. Every qualifier will receive a prize.	
+		\n\nLook forward to seeing on the water.\n	</string>
+	<string name="coordinator">Ian Payne\nLaser South Coast Coordinator</string>
+	<string name="fuque">Fugue Icons are used for calendar, about, results and sponsors icons.\n&#169;2012 Yusuke Kamiyamane.\nAll rights reserved.\n</string>
+	<string name="swanage">Photo of Swanage Laser Open\n&#169; Adrian Whaley 2012</string>
+    <string name="title_activity_map">South Coast GP, Map</string>
+    <string name="title_activity_web">South Coast GP, Web</string>
+    <string name="title_activity_about">South Coast GP, About</string>
+    <string name="app_by">&#169; 2013 Ian Payne BSc (Hons) Comp (Open)\n</string>
+    <string name="app_description">This app allows you to view the details of the 2013 events of the Laser South Coast Grand Prix circuit.  There is information on each event and host club, the event results, and the series results both past and present.</string>
+    <string name="burgee">Burgee</string>
+    <string name="rooster">Rooster Sailing</string>
+    <string name="wildwind">Wildwind Sailing Holidays</string>
+    <string name="standard">Laser</string>
+    <string name="radial">Laser Radial</string>
+    <string name="laser4p7">Laser 4.7</string>
+</resources>

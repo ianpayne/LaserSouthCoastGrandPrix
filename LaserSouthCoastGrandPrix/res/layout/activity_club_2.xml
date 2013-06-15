@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+        
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >         
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/imgFlag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_margin="12dp"
+                android:background="@color/white"
+                android:contentDescription="@string/burgee"
+                android:scaleType="centerInside"
+                android:src="@drawable/cycflag" />
+
+            <TextView
+                android:id="@+id/txtClub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:text="Chichester Yacht Club"
+                android:textSize="@dimen/headerSize" />
+
+        </LinearLayout>
+                   
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <View
+                android:id="@+id/View02"
+                android:layout_width="wrap_content"
+                android:layout_height="4dp"
+                android:background="#222222" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Event Details:"
+                android:textSize="@dimen/textSize" />
+
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/lblDate"
+                    android:layout_width="@dimen/tabSize"
+                    android:layout_height="wrap_content"
+                    android:text="Date:"
+                    android:textSize="@dimen/textSize" />
+
+                <TextView
+                    android:id="@+id/txtDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:text="Not Available"
+                    android:textSize="@dimen/textSize" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/lblTime"
+                    android:layout_width="@dimen/tabSize"
+                    android:layout_height="wrap_content"
+                    android:text="Time:"
+                    android:textSize="@dimen/textSize" />
+
+                <TextView
+                    android:id="@+id/txtTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:text="Not Available"
+                    android:textSize="@dimen/textSize" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/btnNor"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:minHeight="48dp"
+                    android:minWidth="56dp"
+                    android:text="Notice Of\nRace"
+                    android:textSize="@dimen/smallSize" />
+
+                <Button
+                    android:id="@+id/btnSi"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:minHeight="48dp"
+                    android:minWidth="56dp"
+                    android:text="Sailing\nInstructions"
+                    android:textSize="@dimen/smallSize" />
+
+                <Button
+                    android:id="@+id/btnResults"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:minHeight="48dp"
+                    android:minWidth="56dp"
+                    android:text="Results"
+                    android:textSize="@dimen/smallSize" />
+            </TableRow>
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="wrap_content"
+                android:layout_height="4dp"
+                android:background="#222222" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Event Contact Details:"
+                android:textSize="@dimen/textSize" />
+
+            <TableRow
+                android:id="@+id/tableRow8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="@dimen/tabSize"
+                    android:layout_height="wrap_content"
+                    android:text="Name:"
+                    android:textSize="@dimen/textSize" />
+
+                <TextView
+                    android:id="@+id/txtContactName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:text="Not Available"
+                    android:textSize="@dimen/textSize" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="@dimen/tabSize"
+                    android:layout_height="wrap_content"
+                    android:text="Email:"
+                    android:textSize="@dimen/textSize" />
+
+                <TextView
+                    android:id="@+id/txtContactEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:text="Not Available"
+                    android:textSize="@dimen/textSize" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="@dimen/tabSize"
+                    android:layout_height="wrap_content"
+                    android:text="Phone:"
+                    android:textSize="@dimen/textSize" />
+
+                <TextView
+                    android:id="@+id/txtContactPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:text="Not Available"
+                    android:textSize="@dimen/textSize" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/btnEmailContact"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:minHeight="48dp"
+                    android:minWidth="56dp"
+                    android:text="Email Contact"
+                    android:textSize="@dimen/smallSize" />
+
+                <Button
+                    android:id="@+id/btnPhoneContact"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:minHeight="48dp"
+                    android:minWidth="56dp"
+                    android:text="Phone Contact"
+                    android:textSize="@dimen/smallSize" />
+            </TableRow>
+
+            <View
+                android:id="@+id/View03"
+                android:layout_width="wrap_content"
+                android:layout_height="4dp"
+                android:background="#222222" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Club Details:"
+                android:textSize="@dimen/textSize" />
+
+            <TableRow
+                android:id="@+id/tableRow4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/lblAddress"
+                    android:layout_width="@dimen/tabSize"
+                    android:layout_height="wrap_content"
+                    android:text="Address:"
+                    android:textSize="@dimen/textSize" />
+
+                <TextView
+                    android:id="@+id/txtAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:text="Not Available"
+                    android:textSize="@dimen/textSize" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="@dimen/tabSize"
+                    android:layout_height="wrap_content"
+                    android:text="Email:"
+                    android:textSize="@dimen/textSize" />
+
+                <TextView
+                    android:id="@+id/txtClubEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:text="Not Available"
+                    android:textSize="@dimen/textSize" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="@dimen/tabSize"
+                    android:layout_height="wrap_content"
+                    android:text="Phone:"
+                    android:textSize="@dimen/textSize" />
+
+                <TextView
+                    android:id="@+id/txtClubPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:text="Not Available"
+                    android:textSize="@dimen/textSize" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/btnEmailClub"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:minHeight="48dp"
+                    android:minWidth="56dp"
+                    android:text="Email Club"
+                    android:textSize="@dimen/smallSize" />
+
+                <Button
+                    android:id="@+id/btnPhoneClub"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:minHeight="48dp"
+                    android:minWidth="56dp"
+                    android:text="Phone Club"
+                    android:textSize="@dimen/smallSize" />
+
+                <Button
+                    android:id="@+id/btnWebsite"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:minHeight="48dp"
+                    android:minWidth="56dp"
+                    android:text="Website"
+                    android:textSize="@dimen/smallSize" />
+
+                <Button
+                    android:id="@+id/btnMap"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:minHeight="48dp"
+                    android:minWidth="56dp"
+                    android:text="Map"
+                    android:textSize="@dimen/smallSize" />
+            </TableRow>
+        </TableLayout>
+	</LinearLayout>
+</ScrollView>

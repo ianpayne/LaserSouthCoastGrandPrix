@@ -1,0 +1,52 @@
+Address,cyc,Chichester Marina,,,Birdham,West Sussex,PO20 7EJ,01243 512918,50.803982,-0.827118
+Address,spin,Ivy Lane,,Blashford,Ringwood,Hampshire,BH24 3LY,01425 483692,50.867238,-1.779732
+Address,ayc,River Side West,,,Littlehampton,West Sussex,BN17 5DL,,50.806041,-0.545198
+Address,bsc,The Quay,,Bosham,Chichester,West Sussex,PO18 8LU,01243 572341,50.828229,-0.859957
+Address,esc,55 Bath Road,,,Emsworth,Hampshire,PO10 7ES,01243 372850,50.842346,-0.93991
+Address,hsc,Sea Vixen,,Mudeford Quay,Christchurch,Dorset,BH23 4AB,01425 274874,50.724493,-1.741837
+Address,hhsc,Cliff Road,,Hill Head,Fareham,Hampshire,PO14 3JT,01329 664843,50.81789,-1.240978
+Address,lsc,Shopsdam Road,,,Lancing,West Sussex,BN15 8ES,01903 766006,50.821558,-0.313151
+Address,msc,The Dutch Barge,Fishermans Bank,Mudeford,Christchurch,Dorset,BH23 3NP,01202 477553,50.726586,-1.753145
+Address,stokes,The Promenade,Stokes Bay Road,,Gosport,Hampshire,PO12 2BL,023 9258 1513,50.781921,-1.154468
+Address,sutton,Halstock,,,Yeovil,Somerset,BA22 9QP,01935 862933,50.900577,-2.644647
+Address,swanage,Buck Shore,Peveril Point Road,,Swanage,Dorset,BH19 2AY,01929 422987,50.607324,-1.952592
+Address,weston,Abbey Hill,Netley Abbey,,Southampton,Hampshire,SO31 5FB,02380 452527,50.878936,-1.362852
+Club,cyc,Chichester Yacht Club,cycAddr,office@cyc.co.uk,cycflag,http://www.cycdinghies.co.uk
+Club,ayc,Arun Yacht Club,aycAddr,secretary@arunyc.co.uk,arun,http://www.arunyc.co.uk/
+Club,bsc,Bosham Sailing Club,bscAddr,manager@boshamsailingclub.com,bosham,http://www.boshamsailingclub.com/
+Club,esc,Emsworth Sailing Club,escAddr,secretary@emsworthsc.org.uk,emsworth,http://www.emsworthsc.org.uk/
+Club,hsc,Highcliffe Sailing Club,hscAddr,peter@pbell.f2s.com,highcliffe,http://www.highcliffesailing.co.uk/
+Club,hhsc,Hill Head Sailing Club,hhscAddr,admin@hillheadsc.org.uk,hillhead,http://www.hillheadsc.org.uk/
+Club,lsc,Lancing Sailing Club,lscAddr,sailingsec@lancingsc.org.uk,lancing,http://lancingsc.org.uk/
+Club,msc,Mudeford Sailing Club,mscAddr,roachfoxwood@aol.com,blank,http://www.mudefordsc.org/
+Club,spin,Spinnaker Sailing Club,spinAddr,office@spinnakerclub.co.uk,spinnaker,http://spinnakerclub.co.uk/
+Club,stokes,Stokes Bay Sailing Club,stokesAddr,administrator@stokesbay-sc.co.uk,stokesbay,http://www.stokesbay-sc.co.uk/
+Club,sutton,Sutton Bingham Sailing Club,suttonAddr,,suttonbingham,http://www.suttonbinghamsc.net
+Club,swanage,Swanage Sailing Club,swanAddr,honsec@swanagesailingclub.org.uk,swanage,http://www.swanagesailingclub.org.uk/
+Club,weston,Weston Sailing Club,wscAddr,info@weston.org.uk,weston,http://www.weston.org.uk/		
+Contact,cyc,John Crawley,john.e.crawley@gsk.com,
+Contact,ayc,David Robinson,david@bilshamlane.plus.net,
+Contact,bsc,Nigel Russell,nige1russell@btinternet.com,
+Contact,esc,Mike Powell,mike.jepowell@yahoo.com,
+Contact,hsc,Simon Mussell,simon@nexuscp.co.uk,
+Contact,hhsc,Luke Morrison,LukeMorrison@hillheadsc.org.uk,
+Contact,lsc,David Trout,atdt@fsmail.net,
+Contact,msc,Mike Roach,roachfoxwood@aol.com,
+Contact,spin,Chris Burleigh,laser@spinnakerclub.co.uk,
+Contact,stokes,Ian Ross,ian@riross.co.uk,
+Contact,sutton,Chris Jones,chrisroj@hotmail.co.uk,
+Contact,swanage,David Bryant,dbryant@dircon.co.uk,
+Contact,weston,Julius Mach,juliusmach@gmail.com,
+Event,spin,spinAddr,spinCon,21/04/2013,1100,http://spinnakerclub.co.uk/wp-content/uploads/2012/07/Laser-Grand-Prix-Spinnaker-Club.pdf,,,
+Event,ayc,aycAddr,aycCon,18/05/2013,1230,,,,
+Event,sutton,suttonAddr,suttonCon,19/05/2013,TBA,,,,
+Event,lsc,lscAddr,lscCon,02/06/2013,TBA,,,,
+Event,weston,wscAddr,wscCon,08/06/2013,TBA,,,,
+Event,hhsc,hhscAddr,hhscCon,09/06/2013,TBA,,,,
+Event,hsc,hscAddr,hscCon,06/07/2013,TBA,,,,
+Event,bsc,bscAddr,bscCon,20/07/2013,TBA,,,,
+Event,esc,escAddr,escCon,21/07/2013,TBA,,,,
+Event,msc,mscAddr,mscCon,27/07/2013,TBA,,,,
+Event,swanage,swanAddr,swanageCon,03/08/2013,TBA,,,,
+Event,stokes,stokesAddr,stokesCon,05/10/2013,TBA,,,,            
+Event,cyc,cycAddr,cycCon,20/10/2013,12:30,,,,

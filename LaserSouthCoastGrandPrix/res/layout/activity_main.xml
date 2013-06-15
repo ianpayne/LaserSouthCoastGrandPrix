@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="25dp" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/short_description"
+            android:textSize="@dimen/textSize" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/swanage"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/swanage2012" />
+
+        <TextView
+            android:id="@+id/txtMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:clickable="true"
+            android:onClick="toggleText"
+            android:text="More..."
+            android:textSize="@dimen/textSize" />
+    
+    <TextView
+        android:id="@+id/txtMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/long_description"
+        android:textSize="@dimen/textSize"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/txtCoordinator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="@string/coordinator"
+        android:textSize="@dimen/textSize"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btnEmailCoordinator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="emailCoordinator"
+        android:text="Email Coordinator"
+        android:textSize="@dimen/smallSize"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/txtLess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:clickable="true"
+        android:onClick="toggleText"
+        android:text="Less..."
+        android:textSize="@dimen/textSize"
+        android:visibility="gone" />
+
+    <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/activity_sponsor" />
+
+    </LinearLayout>
+    
+
+</ScrollView>
