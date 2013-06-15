@@ -1,4 +1,6 @@
-package com.idp.grandprix;
+package com.idp.grandprix.ui;
+
+import com.idp.grandprix.R;
 
 import android.os.Bundle;
 import android.view.View;

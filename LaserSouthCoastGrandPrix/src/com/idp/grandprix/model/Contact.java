@@ -1,13 +1,13 @@
-package com.idp.grandprix;
+package com.idp.grandprix.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 
 public class Contact implements Parcelable{
-	protected String id;
-	protected String name;
-	protected String email;
-	protected String phone;
+	private String id;
+	private String name;
+	private String email;
+	private String phone;
 	
 	public Contact(String name, String email, String phone) {
 		this.id = "";

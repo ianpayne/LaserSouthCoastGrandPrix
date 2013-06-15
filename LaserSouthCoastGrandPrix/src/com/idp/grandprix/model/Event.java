@@ -1,4 +1,4 @@
-package com.idp.grandprix;
+package com.idp.grandprix.model;
 
 import android.location.Address;
 import android.os.Parcel;
@@ -6,17 +6,17 @@ import android.os.Parcelable;
 
 public class Event implements Parcelable 
 {
-	protected String id;
-	protected String date;
-	protected String time;
-	protected String resultsUrl;
-	protected String norUrl;
-	protected String siUrl;
-	protected String entryFormUrl;
+	private String id;
+	private String date;
+	private String time;
+	private String resultsUrl;
+	private String norUrl;
+	private String siUrl;
+	private String entryFormUrl;
 	
-	protected Club club;
-	protected Contact contact;
-	protected Address address;
+	private Club club;
+	private Contact contact;
+	private Address address;
 		
 	
 	public Event(Club club, Address address, Contact contact, String date, String time, String norUrl, String siUrl, String entryFormUrl, String resultsUrl){

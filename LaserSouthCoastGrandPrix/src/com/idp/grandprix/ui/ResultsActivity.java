@@ -1,4 +1,7 @@
-package com.idp.grandprix;
+package com.idp.grandprix.ui;
+
+import com.idp.grandprix.R;
+import com.idp.grandprix.model.ResultLink;
 
 import android.os.Bundle;
 import android.content.Intent;

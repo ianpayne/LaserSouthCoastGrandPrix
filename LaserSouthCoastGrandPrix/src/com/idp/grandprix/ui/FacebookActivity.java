@@ -1,4 +1,7 @@
-package com.idp.grandprix;
+package com.idp.grandprix.ui;
+
+
+import com.idp.grandprix.R;
 
 import android.os.Bundle;
 import android.content.Intent;
@@ -8,66 +11,21 @@ import android.view.ViewGroup;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
-public class ClubMapActivity extends FooterActivity {
-	private String club;
-	private String lat;
-	private String lng;
-	private WebView webView;
-	
+public class FacebookActivity extends FooterActivity {
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
+		//setContentView(R.layout.facebook_activity);
 		ViewGroup vg = (ViewGroup)findViewById(R.id.lldata);
 		ViewGroup.inflate(getBaseContext(), R.layout.webview, vg);
-				
-		webView = (WebView)findViewById(R.id.webView1);
-		webView.setWebViewClient(new Callback());
-		WebSettings webSettings = webView.getSettings();
+		
+		WebView wv = (WebView)findViewById(R.id.webView1);
+		wv.setWebViewClient(new Callback());
+		WebSettings webSettings = wv.getSettings();
 		webSettings.setBuiltInZoomControls(true);
-						
-		//get passed url
-		Intent intent = getIntent();
-		lat = intent.getStringExtra("lat");
-		lng = intent.getStringExtra("lng");
-		club = intent.getStringExtra("club");
-		displayMap();
-		
+		wv.loadUrl("http://www.facebook.com/LaserSouthCoastGrandPrix");
 	}
-	
-	public void displayMap(){
-		this.setTitle("South Coast GP, " + club);
-		String baseUrl = "http://maps.googleapis.com/maps/api/staticmap?";		
-		//String lat = "50.803765";
-		//String lng = "-0.825777";
-		String center = "center=" + lat + "," + lng;
-		String label = "label:CYC";
-		String colour = "color:blue";
-		String marker = "&markers=" + colour + "%7C" + label + "%7C" + lat + "," + lng;           
-		String size = "&size=" + "640x640";
-		String zoom = "&zoom=" + "2";
-		String scale=null;
-    	scale = "&scale=1";
-		
-		String maptype = "&maptype=roadmap";
-		String sensor = "&sensor="+ "false";
-		String builtUrl = baseUrl + zoom + center +  size + scale + maptype + marker + sensor;
-		
-		webView.loadUrl(builtUrl);		
-	}
-	/*
-	public void toggleZoom(View v){
-		Button btnZoom = (Button) findViewById(R.id.btnZoom);
-		if (btnZoom.getText() == "1x"){
-			btnZoom.setText("2x");
-			displayMap(1);
-		} else {
-			btnZoom.setText("1x");
-			displayMap(2);
-		}
-		
-	}
-	*/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

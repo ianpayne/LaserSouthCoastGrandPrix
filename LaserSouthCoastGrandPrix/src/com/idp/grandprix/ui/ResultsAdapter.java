@@ -1,4 +1,8 @@
-package com.idp.grandprix;
+package com.idp.grandprix.ui;
+
+import com.idp.grandprix.R;
+
+import com.idp.grandprix.model.ResultLink;
 
 import android.app.Activity;
 import android.content.Context;
@@ -11,19 +15,20 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+
 public class ResultsAdapter extends ArrayAdapter<ResultLink> //implements OnClickListener
 {
 
     Context context;
     int layoutResourceId;   
-    ResultLink data[] = null;
+    //ResultLink data[] = null;
    
     
     public ResultsAdapter(Context context, int layoutResourceId, ResultLink[] data) {
         super(context, layoutResourceId, data);
         this.layoutResourceId = layoutResourceId;
         this.context = context;
-        this.data = data;
+        //this.data = data;
     }
 
     @Override
@@ -51,18 +56,20 @@ public class ResultsAdapter extends ArrayAdapter<ResultLink> //implements OnClic
             holder = (Holder)row.getTag();
         }
         
-        ResultLink result = data[position];
-        holder.year.setText(result.year);
+        //ResultLink result = data[position];
+        ResultLink result = getItem(position);
+        
+        holder.year.setText(result.getYear());
         //holder.standard.setText("Standard");
         //holder.radial.setText("Radial");
         //holder.fourPointSeven.setText("4.7");
         
         ImageButton button = (ImageButton) row.findViewById(R.id.standard);
-        button.setOnClickListener(new MyClickListener(position, "Standard", data));
+        button.setOnClickListener(new MyClickListener(position, "Standard", result));
         button = (ImageButton) row.findViewById(R.id.radial);
-        button.setOnClickListener(new MyClickListener(position, "Radial", data));
+        button.setOnClickListener(new MyClickListener(position, "Radial", result));
         button = (ImageButton) row.findViewById(R.id.fourpointseven);
-        button.setOnClickListener(new MyClickListener(position, "4.7", data));
+        button.setOnClickListener(new MyClickListener(position, "4.7", result));
         
         return row;
     }
@@ -71,25 +78,25 @@ public class ResultsAdapter extends ArrayAdapter<ResultLink> //implements OnClic
 
         private int position;
         private String rig;
-        private ResultLink data[];
-
-        public MyClickListener(int position, String rig, ResultLink data[]) {
+        private ResultLink result;
+        
+        public MyClickListener(int position, String rig, ResultLink result) {
            this.position = position;
            this.rig = rig;
-           this.data = data;
+           this.result = result;
         }
 
         public void onClick(View v) {
            // get URL
            String url = "";
            if (rig.contains("Standard")){
-        	   url = data[position].getStandard();
+        	   url = result.getStandard();
            }
            else if (rig.contains("Radial")){
-        	   url = data[position].getRadial();
+        	   url = result.getRadial();
            }
            else if (rig.contains("4.7")){
-        	   url = data[position].getFourPointSeven();
+        	   url = result.getFourPointSeven();
            }     
            
            // launch web view with results url
@@ -104,8 +111,8 @@ public class ResultsAdapter extends ArrayAdapter<ResultLink> //implements OnClic
            {
         	   //System.out.println("Gets HERE");
         	   intent.putExtra("url", url);
-        	   intent.putExtra("title", ("South Coast GP, " + data[position].getYear() + " results for the " + rig + " class."));
-        	   //intent.putExtra("Year", data[position].getYear());
+        	   intent.putExtra("title", ("South Coast GP, " + result.getYear() + " results for the " + rig + " class."));
+        	   //intent.putExtra("Year", result.getYear());
         	   //intent.putExtra("Rig", rig);
         	   
         	   context.startActivity(intent);

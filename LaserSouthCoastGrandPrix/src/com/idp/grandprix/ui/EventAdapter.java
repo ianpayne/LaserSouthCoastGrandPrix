@@ -1,4 +1,7 @@
-package com.idp.grandprix;
+package com.idp.grandprix.ui;
+
+import com.idp.grandprix.R;
+import com.idp.grandprix.model.Event;
 
 import android.app.Activity;
 import android.content.Context;
@@ -12,18 +15,18 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class OpenEventAdapter extends ArrayAdapter<Event>
+public class EventAdapter extends ArrayAdapter<Event>
 	{
 
 	    Context context;
 	    int layoutResourceId;   
-	    Event data[] = null;
+	    //Event data[] = null;
 	   
-	    public OpenEventAdapter(Context context, int layoutResourceId, Event[] data) {
+	    public EventAdapter(Context context, int layoutResourceId, Event[] data) {
 	        super(context, layoutResourceId, data);
 	        this.layoutResourceId = layoutResourceId;
 	        this.context = context;
-	        this.data = data;
+	        //this.data = data;
 	    }
 
 	    @Override
@@ -51,7 +54,9 @@ public class OpenEventAdapter extends ArrayAdapter<Event>
 	            holder = (EventHolder)row.getTag();
 	        }
 	        //getItem(position);
-	        Event event = data[position];
+	        //Event event = data[position];
+	        Event event = getItem(position);
+	        
 	        if (event != null){
 	        	//Log.e("Event", event.getClub().getName());
 		        int resID = this.context.getResources().getIdentifier(event.getClub().getFlag(), "drawable",  this.context.getPackageName());  
@@ -61,7 +66,7 @@ public class OpenEventAdapter extends ArrayAdapter<Event>
 		        holder.time.setText(event.getTime());
 		        //holder.nor.setText(event.nor);
 		        
-		        row.setOnClickListener(new MyClickListener(position, data));	        	
+		        row.setOnClickListener(new MyClickListener(position, event));	        	
 	        }
 	        else {
 	        	//Log.e("Event", "Event is null!");
@@ -75,17 +80,17 @@ public class OpenEventAdapter extends ArrayAdapter<Event>
 	    private class MyClickListener implements OnClickListener {
 
 	        private int position;
-	        private Event events[];
+	        private Event event;
 
-	        public MyClickListener(int position, Event events[]) {
+	        public MyClickListener(int position, Event event) {
 	           this.position = position;
-	           this.events = events;
+	           this.event = event;
 	        }
 
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Event event = events[position];
+				//Event event = events[position];
 				
 				Intent intent = new Intent(getContext(), ClubActivity.class);
 				intent.putExtra("event", event);

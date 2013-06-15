@@ -1,4 +1,4 @@
-package com.idp.grandprix;
+package com.idp.grandprix.ui;
 
     import android.app.AlertDialog;  
     import android.content.Context;  

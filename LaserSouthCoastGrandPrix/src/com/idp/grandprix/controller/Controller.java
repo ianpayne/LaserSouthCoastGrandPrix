@@ -1,4 +1,4 @@
-package com.idp.grandprix;
+package com.idp.grandprix.controller;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -24,6 +24,11 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.protocol.BasicHttpContext;
 import org.apache.http.protocol.HttpContext;
 
+import com.idp.grandprix.LaserGrandPrixApp;
+import com.idp.grandprix.model.Club;
+import com.idp.grandprix.model.Contact;
+import com.idp.grandprix.model.Event;
+
 
 import android.content.Context;
 import android.content.res.AssetManager;
@@ -32,12 +37,33 @@ import android.os.Environment;
 //import android.util.Log;
 import android.widget.Toast;
 
+/*
+ * Split into separate controllers
+ * 
+ * Controller
+ * 
+ * 
+ * NetworkController
+ *  - checkForUpdate
+ *  - performUpdate
+ *  - getEventsVersion
+ *  
+ * fileController
+ *  - copyAssets
+ *  - copyFile
+ *  - changeVersionNo
+ *  - loadCSVFile
+ *  
+ * 
+ */
+
 public class Controller {
 	private Context context;
 	private static Controller controller;
 	
 	private static final int SIZE = 20;
 	
+	// move this to a model object?
 	private Address addresses[];
 	private Club clubs[];
 	private Contact contacts[];

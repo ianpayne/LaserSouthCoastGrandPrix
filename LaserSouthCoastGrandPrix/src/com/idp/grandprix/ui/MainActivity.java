@@ -1,4 +1,8 @@
-package com.idp.grandprix;
+package com.idp.grandprix.ui;
+
+import com.idp.grandprix.LaserGrandPrixApp;
+import com.idp.grandprix.R;
+import com.idp.grandprix.controller.Controller;
 
 import android.os.AsyncTask;
 import android.os.Bundle;

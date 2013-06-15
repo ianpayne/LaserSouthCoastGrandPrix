@@ -1,10 +1,10 @@
-package com.idp.grandprix;
+package com.idp.grandprix.model;
 
 public class ResultLink {
-	protected String year;
-	protected String standard;
-	protected String radial;
-	protected String fourPointSeven;
+	private String year;
+	private String standard;
+	private String radial;
+	private String fourPointSeven;
 	
 	public ResultLink(String year, String standard, String radial, String fourPointSeven)
 	{

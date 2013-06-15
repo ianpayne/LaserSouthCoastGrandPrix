@@ -1,28 +1,58 @@
-package com.idp.grandprix;
+package com.idp.grandprix.ui;
 
-import android.os.Bundle;
+import com.idp.grandprix.LaserGrandPrixApp;
+import com.idp.grandprix.R;
+import com.idp.grandprix.controller.Controller;
+import com.idp.grandprix.model.Event;
+
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
+import android.widget.ListView;
 
-public class FacebookActivity extends FooterActivity {
 
+
+public class EventActivity extends FooterActivity {
+	private ListView listView1;
+	private Controller controller;
+
+	private Event events[];
+	
+
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		//setContentView(R.layout.facebook_activity);
-		ViewGroup vg = (ViewGroup)findViewById(R.id.lldata);
-		ViewGroup.inflate(getBaseContext(), R.layout.webview, vg);
+		//setContentView(R.layout.openeventlistview);
 		
-		WebView wv = (WebView)findViewById(R.id.webView1);
-		wv.setWebViewClient(new Callback());
-		WebSettings webSettings = wv.getSettings();
-		webSettings.setBuiltInZoomControls(true);
-		wv.loadUrl("http://www.facebook.com/LaserSouthCoastGrandPrix");
+        ViewGroup vg = (ViewGroup) findViewById(R.id.lldata);
+        ViewGroup.inflate(EventActivity.this, R.layout.openeventlistview, vg);
+        
+        // set model
+        controller =  LaserGrandPrixApp.getController();      
+                    
+        // get Events
+        events = controller.getEvents();
+	
+        //display events in list
+        EventAdapter adapter = new EventAdapter(this, R.layout.listview_item_row, events);
+              
+        listView1 = (ListView) findViewById(R.id.listView1);
+        
+        View header = (View) getLayoutInflater().inflate(R.layout.listview_header, null);
+        listView1.addHeaderView(header);
+       
+        listView1.setAdapter(adapter);		
+
+        listView1.setClickable(true);
+
 	}
+	
+
+	
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -66,5 +96,5 @@ public class FacebookActivity extends FooterActivity {
         
         return true;
  
-    }   
+    }    
 }

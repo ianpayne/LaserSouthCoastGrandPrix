@@ -1,5 +1,7 @@
 package com.idp.grandprix;
 
+import com.idp.grandprix.controller.Controller;
+
 import android.app.Application;
 import android.content.Context;
 import android.util.Log;

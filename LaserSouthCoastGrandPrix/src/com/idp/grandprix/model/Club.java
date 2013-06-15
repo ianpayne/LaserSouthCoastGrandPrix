@@ -1,16 +1,16 @@
-package com.idp.grandprix;
+package com.idp.grandprix.model;
 
 import android.location.Address;
 import android.os.Parcel;
 import android.os.Parcelable;
 
 public class Club implements Parcelable {
-	protected String id;
-	protected String name;
-	protected Address address;
-	protected String email;
-	protected String flag;
-	protected String website;
+	private String id;
+	private String name;
+	private Address address;
+	private String email;
+	private String flag;
+	private String website;
 
 	public Club( String name, Address address, String email, String flag, String website){
 		this.name = name;

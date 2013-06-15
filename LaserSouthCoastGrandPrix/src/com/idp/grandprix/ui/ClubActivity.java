@@ -1,4 +1,7 @@
-package com.idp.grandprix;
+package com.idp.grandprix.ui;
+
+import com.idp.grandprix.R;
+import com.idp.grandprix.model.Event;
 
 import android.location.Address;
 import android.net.Uri;
