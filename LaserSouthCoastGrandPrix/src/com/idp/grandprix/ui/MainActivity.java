@@ -7,9 +7,6 @@ import com.idp.grandprix.controller.Controller;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.content.Intent;
-//import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -50,6 +47,7 @@ public class MainActivity extends FooterActivity {
 
     }
     
+    // moved to controller class??
     private class UpdateTask extends AsyncTask<String, Void, String>{
     	protected String doInBackground(String...url){
              String message = "";
@@ -140,13 +138,7 @@ public class MainActivity extends FooterActivity {
     });
 }
     
-    
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu, menu);
-        return true;
-    }
+
    
 	public void roosterWebsite(View v){
 		Intent intent = new Intent(getBaseContext(), WebActivity.class);
@@ -200,7 +192,15 @@ public class MainActivity extends FooterActivity {
 		emailIntent.putExtra(Intent.EXTRA_TEXT, message); 
 		startActivity(Intent.createChooser(emailIntent, "Send mail..."));
 	}
-    
+	
+	/*
+        
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
     @Override
     public boolean onOptionsItemSelected(MenuItem item)
     {
@@ -238,5 +238,5 @@ public class MainActivity extends FooterActivity {
         return true;
  
     }    	
-
+*/
 }

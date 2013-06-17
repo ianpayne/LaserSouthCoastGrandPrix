@@ -354,7 +354,9 @@ public class Controller {
     }
     
     /*
-     * Reads in data from assets file 
+     * Reads in data from csv file on sdcard
+     * 
+     *  needs to be split into three
      */
     
     public void loadCSVEvents(){

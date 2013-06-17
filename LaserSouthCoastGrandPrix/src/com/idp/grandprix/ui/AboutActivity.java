@@ -5,8 +5,6 @@ import com.idp.grandprix.R;
 
 import android.os.Bundle;
 import android.content.Intent;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -33,13 +31,15 @@ public class AboutActivity extends FooterActivity {
 		emailIntent.putExtra(Intent.EXTRA_TEXT, message); 
 		startActivity(Intent.createChooser(emailIntent, "Send mail..."));
 	}
-	
+	 /*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu, menu);
         return true;
     }
+    
+   
     @Override
     public boolean onOptionsItemSelected(MenuItem item)
     {
@@ -76,5 +76,5 @@ public class AboutActivity extends FooterActivity {
         
         return true;
  
-    }   
+    } */  
 }

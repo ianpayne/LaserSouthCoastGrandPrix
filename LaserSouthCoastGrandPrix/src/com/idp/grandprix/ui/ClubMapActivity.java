@@ -5,8 +5,6 @@ import com.idp.grandprix.R;
 
 import android.os.Bundle;
 import android.content.Intent;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.ViewGroup;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -72,6 +70,7 @@ public class ClubMapActivity extends FooterActivity {
 	}
 	*/
 
+	/*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -114,5 +113,5 @@ public class ClubMapActivity extends FooterActivity {
         
         return true;
  
-    }   
+    } */  
 }

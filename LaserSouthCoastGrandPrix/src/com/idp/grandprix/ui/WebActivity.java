@@ -5,8 +5,6 @@ import com.idp.grandprix.R;
 
 import android.os.Bundle;
 import android.content.Intent;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.ViewGroup;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -35,6 +33,8 @@ public class WebActivity extends FooterActivity {
 		this.setTitle(title);
 		wv.loadUrl(url);
 	}
+	
+	/*
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -80,5 +80,7 @@ public class WebActivity extends FooterActivity {
         return true;
  
     }   
+    
+    */
 
 }

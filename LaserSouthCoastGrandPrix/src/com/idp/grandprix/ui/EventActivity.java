@@ -5,10 +5,7 @@ import com.idp.grandprix.R;
 import com.idp.grandprix.controller.Controller;
 import com.idp.grandprix.model.Event;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
@@ -51,7 +48,7 @@ public class EventActivity extends FooterActivity {
 
 	}
 	
-
+/*
 	
 
     @Override
@@ -96,5 +93,6 @@ public class EventActivity extends FooterActivity {
         
         return true;
  
-    }    
+    }*/
+	
 }

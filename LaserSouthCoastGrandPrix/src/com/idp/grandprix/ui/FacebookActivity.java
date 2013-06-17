@@ -4,9 +4,6 @@ package com.idp.grandprix.ui;
 import com.idp.grandprix.R;
 
 import android.os.Bundle;
-import android.content.Intent;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.ViewGroup;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -26,6 +23,7 @@ public class FacebookActivity extends FooterActivity {
 		webSettings.setBuiltInZoomControls(true);
 		wv.loadUrl("http://www.facebook.com/LaserSouthCoastGrandPrix");
 	}
+	/*
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -69,5 +67,6 @@ public class FacebookActivity extends FooterActivity {
         
         return true;
  
-    }   
+    } */
+	
 }

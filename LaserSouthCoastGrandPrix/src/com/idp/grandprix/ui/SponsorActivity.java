@@ -5,7 +5,6 @@ import com.idp.grandprix.R;
 
 import android.os.Bundle;
 import android.content.Intent;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,7 +34,7 @@ public class SponsorActivity extends FooterActivity {
 		
 		startActivity(intent);		
 	}
-	
+	/*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -79,5 +78,5 @@ public class SponsorActivity extends FooterActivity {
         
         return true;
  
-    }   
+    }   */
 }
