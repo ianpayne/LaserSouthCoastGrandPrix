@@ -27,6 +27,10 @@
         android:icon="@drawable/facebook">
     </item>
     <item
+        android:id="@+id/menu_update"
+        android:title="Update">
+    </item>
+    <item
         android:id="@+id/menu_about"
         android:title="About"
         android:icon="@drawable/question">

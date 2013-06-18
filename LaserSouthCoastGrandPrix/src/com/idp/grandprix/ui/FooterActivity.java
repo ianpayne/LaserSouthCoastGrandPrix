@@ -1,5 +1,6 @@
 package com.idp.grandprix.ui;
 
+import com.idp.grandprix.LaserGrandPrixApp;
 import com.idp.grandprix.R;
 
 import android.os.Bundle;
@@ -108,6 +109,9 @@ public class FooterActivity extends Activity {
         	break;
         	
         // Add menu item to updated app
+        case R.id.menu_update:
+        	new UpdateTask().execute(LaserGrandPrixApp.getController(), this);
+        break;
         	
         default:
             return super.onOptionsItemSelected(item);

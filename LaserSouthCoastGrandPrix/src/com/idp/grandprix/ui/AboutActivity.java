@@ -1,14 +1,20 @@
 package com.idp.grandprix.ui;
 
 
+import com.idp.grandprix.LaserGrandPrixApp;
 import com.idp.grandprix.R;
+import com.idp.grandprix.controller.Controller;
 
 import android.os.Bundle;
 import android.content.Intent;
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 public class AboutActivity extends FooterActivity {
+	
+	Controller controller;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +23,20 @@ public class AboutActivity extends FooterActivity {
 
         ViewGroup vg = (ViewGroup) findViewById(R.id.lldata);
         ViewGroup.inflate(AboutActivity.this, R.layout.activity_about, vg);
+        
+        // set model
+        controller =  LaserGrandPrixApp.getController();
+        
+        
+        try {
+        	TextView version = (TextView) findViewById(R.id.txtVersion);
+			version.setText("Version: " + getPackageManager().getPackageInfo(getPackageName(), 0).versionName);
+		} catch (NameNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        
+
 	}
 
 	public void emailDeveloper(View v){
@@ -31,6 +51,12 @@ public class AboutActivity extends FooterActivity {
 		emailIntent.putExtra(Intent.EXTRA_TEXT, message); 
 		startActivity(Intent.createChooser(emailIntent, "Send mail..."));
 	}
+	public void update(View v){
+		//Toast.makeText(this.getBaseContext(), "press update button", Toast.LENGTH_LONG).show();
+		new UpdateTask().execute(controller, this);
+		//Toast.makeText(this.getBaseContext(), "update task completed", Toast.LENGTH_LONG).show();
+	}
+ 
 	 /*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

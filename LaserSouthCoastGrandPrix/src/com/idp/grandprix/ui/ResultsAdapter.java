@@ -65,23 +65,21 @@ public class ResultsAdapter extends ArrayAdapter<ResultLink> //implements OnClic
         //holder.fourPointSeven.setText("4.7");
         
         ImageButton button = (ImageButton) row.findViewById(R.id.standard);
-        button.setOnClickListener(new MyClickListener(position, "Standard", result));
+        button.setOnClickListener(new MyClickListener("Standard", result));
         button = (ImageButton) row.findViewById(R.id.radial);
-        button.setOnClickListener(new MyClickListener(position, "Radial", result));
+        button.setOnClickListener(new MyClickListener("Radial", result));
         button = (ImageButton) row.findViewById(R.id.fourpointseven);
-        button.setOnClickListener(new MyClickListener(position, "4.7", result));
+        button.setOnClickListener(new MyClickListener("4.7", result));
         
         return row;
     }
     
     private class MyClickListener implements OnClickListener {
 
-        private int position;
         private String rig;
         private ResultLink result;
         
-        public MyClickListener(int position, String rig, ResultLink result) {
-           this.position = position;
+        public MyClickListener(String rig, ResultLink result) {
            this.rig = rig;
            this.result = result;
         }

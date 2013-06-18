@@ -66,7 +66,7 @@ public class EventAdapter extends ArrayAdapter<Event>
 		        holder.time.setText(event.getTime());
 		        //holder.nor.setText(event.nor);
 		        
-		        row.setOnClickListener(new MyClickListener(position, event));	        	
+		        row.setOnClickListener(new MyClickListener(event));	        	
 	        }
 	        else {
 	        	//Log.e("Event", "Event is null!");
@@ -78,12 +78,9 @@ public class EventAdapter extends ArrayAdapter<Event>
 	    }
 	    
 	    private class MyClickListener implements OnClickListener {
-
-	        private int position;
 	        private Event event;
 
-	        public MyClickListener(int position, Event event) {
-	           this.position = position;
+	        public MyClickListener(Event event) {
 	           this.event = event;
 	        }
 

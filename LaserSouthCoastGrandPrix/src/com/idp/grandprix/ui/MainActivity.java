@@ -4,41 +4,43 @@ import com.idp.grandprix.LaserGrandPrixApp;
 import com.idp.grandprix.R;
 import com.idp.grandprix.controller.Controller;
 
-import android.os.AsyncTask;
 import android.os.Bundle;
+import android.app.Activity;
 import android.content.Intent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class MainActivity extends FooterActivity {
 	
 	private Controller controller;
-
+	private Activity activity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        activity = this;
         
         //setContentView(R.layout.activity_main);
         ViewGroup vg = (ViewGroup) findViewById(R.id.lldata);
         ViewGroup.inflate(MainActivity.this, R.layout.activity_main, vg);
         
-        // set model
+        // get controller
         controller =  LaserGrandPrixApp.getController();  
                 
+        // move to Application.onCreate
+
         if (!controller.getUpdated()){
             PromptDialog dlg = new PromptDialog(MainActivity.this, "Updating", "Check for updated series information!") {  
            	 @Override  
            	 public boolean onOkClicked(String input) {  
                     // check for updates and download
                     //Log.e("MainActivity", "checkForUpdates()");
-                    new UpdateTask().execute("");
+                    new UpdateTask().execute(controller, activity);
 
-           	  return true; // true = close diaLog  
+           	  return true; // true = close iaLog  
            	 }  
            	};  
            	dlg.show();         	
@@ -47,87 +49,42 @@ public class MainActivity extends FooterActivity {
 
     }
     
-    // moved to controller class??
-    private class UpdateTask extends AsyncTask<String, Void, String>{
+    /*
+    
+    // checks for updates and performs updates
+    private class UpdateTask extends AsyncTask<String, String, String>{
     	protected String doInBackground(String...url){
              String message = "";
              if (controller.checkForUpdates()){ 
-            	 showToastFromBackground("Update available, performing update.");
+            	 //showToastFromBackground("Update available, performing update.");
+            	 publishProgress("Update available, performing update.");
             	 if (controller.performUpdate()){
             		 controller.setUpdated(true);
             		 controller.loadCSVEvents();
-            		 showToastFromBackground("Series information updated.");
+            		 //showToastFromBackground("Series information updated.");
+            		 publishProgress("Series information updated.");
             	 }
             	 else{
-            		 showToastFromBackground("Series information has NOT been updated.");
+            		 //showToastFromBackground("Series information has NOT been updated.");
+            		 publishProgress("Series information has NOT been updated.");
             	 }
              }
              else {
             	 controller.setUpdated(true);
-            	 showToastFromBackground("Series information is up todate");
+            	 //showToastFromBackground("Series information is up todate");
+            	 publishProgress("Series information is up todate");
              }
              return message;
     	}
-    	protected void onProgressUpdate(Void...progress){
-    		
+    	protected void onProgressUpdate(String...progress){
+    		super.onProgressUpdate(progress);
+    		showToastFromBackground(progress[0]);
     	}
     	protected void onPostExecute(String result){
     		
     	}
     }     
-    /*
-    private class checkForUpdateTask extends AsyncTask<String, Void, Boolean>{
-    	protected Boolean doInBackground(String...url){
-    	
-             boolean requiresUpdating = model.checkForUpdates();
-             if (requiresUpdating){  
-                 return Boolean.TRUE;
-             }
-             else {
-            	 return Boolean.FALSE;
-             }
-    	}
-    	protected void onProgressUpdate(Void...progress){
-    		
-    	}
-    	protected void onPostExecute(Boolean result){
-    		if (result){
-    			showToastFromBackground("Requires update");
-    			new UpdateTask().execute("");
-    		}
-    		else {
-    			showToastFromBackground("Up to date");
-    		}
-    		
-    	}
-    }    
-    private class UpdateTask extends AsyncTask<String, Void, Boolean>{
-    	protected Boolean doInBackground(String...url){
-    	
-             boolean success = model.performUpdate();
-             if (success){
-                 model.setUpdated(true);  
-                 return Boolean.TRUE;
-             }
-             else {
-            	 return Boolean.FALSE;
-             }
 
-    	}
-    	protected void onProgressUpdate(Void...progress){
-    		
-    	}
-    	protected void onPostExecute(Boolean result){
-            if (result){  
-                // display message
-                showToastFromBackground("Updated!");
-            }
-            else {
-           	 showToastFromBackground("Not updated!");
-            }    		
-    	}
-    }
-    */
     private void showToastFromBackground(final String message) {
     runOnUiThread(new Runnable() {
 
@@ -136,8 +93,9 @@ public class MainActivity extends FooterActivity {
             Toast.makeText(MainActivity.this, message, Toast.LENGTH_LONG).show();
         }
     });
-}
     
+}
+    */
 
    
 	public void roosterWebsite(View v){

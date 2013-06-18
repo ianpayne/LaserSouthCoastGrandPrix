@@ -102,7 +102,9 @@ public class Controller {
 	public Event[] getEvents(){
 		return events;
 	}
-	
+	public Context getContext(){
+		return context;
+	}
 	public boolean getUpdated(){
 		return updated;
 	}
